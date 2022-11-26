@@ -1,0 +1,99 @@
+.dropdown-wrapper {
+  height: 100%;
+  max-height: 250px;
+  min-height: 250px;
+  overflow-y: hidden;
+  padding: 20px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  margin-top: 3rem;
+  display: flex;
+  column-gap: 2.5rem;
+
+  .dropdown-item {
+    width: 100%;
+
+    &-default {
+      border: 1px solid #c4c4c4;
+      padding: 0.5rem 0.75rem;
+      position: relative;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      cursor: pointer;
+
+      &.active {
+        border: 1px solid rgb(16, 159, 16);
+      }
+      span {
+        position: none;
+        &:last-child {
+          width: 0;
+          height: 0;
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+          border-top: 6px solid rgb(71, 71, 71);
+          position: absolute;
+          top: 50%;
+          right: 5px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    &-label {
+      margin-bottom: 0.5rem;
+    }
+
+    &-select {
+      width: 100%;
+      height: 30px;
+
+      .dropdown-item-ul {
+        // margin-right: 3px;
+        height: 0;
+        border: none;
+        overflow-y: hidden;
+        position: relative;
+        &.active {
+          height: 155px;
+          overflow-y: auto;
+          border: 1px solid rgb(16, 159, 16);
+        }
+
+        &-item {
+          padding: 0.9rem 1rem;
+          cursor: pointer;
+
+          &.active {
+            background-color: #c4c4c4;
+
+            &:hover {
+              background-color: #c4c4c4;
+            }
+          }
+
+          &.hover {
+            background-color: #e7f6f7;
+          }
+          &:hover {
+            background-color: #e7f6f7;
+          }
+          &.dropdown-item-input {
+            width: 100%;
+            padding: 0;
+
+            input {
+              width: 100%;
+              border: none;
+              background-color: #e7f6f7;
+              padding: 0.8rem 1rem;
+              &:focus {
+                border: none;
+                outline: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.selected-item {
+  margin-bottom: 0.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  span {
+    &.selected-item-value {
+      margin-left: 0.5rem;
+    }
+  }
+}
